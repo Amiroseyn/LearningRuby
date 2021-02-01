@@ -7,15 +7,11 @@ To get started with TDD, see the `README.md` file in your
 =end
 
 class Acronym
-    attr_accessor :abbreviate
-
-    def  initialize(abbreviate)
-        @abbreviate = abbreviate
-      end
-
-    def test_basic
-        @abbreviate.gsub
-    end
-
+  def self.abbreviate(phrase)
+    words = phrase.split(/[\s,-]/)
+    # pp words
+    words.map { |word| word[0] }.join.upcase
+  end
+  
 end
 
