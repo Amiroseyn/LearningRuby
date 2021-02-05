@@ -7,19 +7,15 @@ To get started with TDD, see the `README.md` file in your
 =end
 
 class HighScores
-  
   attr_accessor :scores
-  
   
   def  initialize(scores)
     @scores = scores
   end
   
-  
   def latest
     scores.last
   end
-  
   
   def personal_best
     scores.max
@@ -32,8 +28,6 @@ class HighScores
   def latest_is_personal_best?
     latest == personal_best
   end
-  
-  
 end
 
 
