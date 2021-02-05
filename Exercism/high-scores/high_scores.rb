@@ -17,20 +17,20 @@ class HighScores
   
   
   def latest
-    @scores.last
+    scores.last
   end
   
   
   def personal_best
-    @scores.sort.last
+    scores.max
   end
   
   def personal_top_three
-    @scores.sort.last(3).reverse
+    scores.max(3)
   end
   
   def latest_is_personal_best?
-    @scores.last == personal_best
+    latest == personal_best
   end
   
   
