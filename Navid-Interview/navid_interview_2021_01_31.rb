@@ -15,9 +15,17 @@ end
 nums = [1, 22, 3, 4, 5]
 numsTwo = []
     
-nums[3] = 14
+# nums[3] = 14
 
 puts running_sum(nums, numsTwo)
 
 
 # write a function that receives an array and returns sum of the elemnts in the array.
+
+
+# puts nums.sum
+
+# while i < nums.length do
+#     n = y + x
+#     i += 1
+# end
