@@ -10,15 +10,16 @@ def decrypt(code), key
     i = 0
     # k = 3
 
-    while i < code.length do 
-        key.push(code.sum)
-        return key[i]
+    while key.length = code.length do 
+        x = #the combined values of the 3 elements after i
+        key.push(x)
         i += 1
+        return key[i]
     end
 end
 
 code = [5, 7, 1, 4]
-solution = []
+key = []
 
 puts decrypt(code, key)
 
@@ -27,15 +28,15 @@ puts decrypt(code, key)
 #it should use some sort of map.with_index {|...|....if}
 #that's it for now :(
 
-    def decrypt(code, key)
-        code = [5, 7, 1, 4]
-        key = []
-        # get 3 elements from the code
-        def code.cycle.each_slice(3).take(4).push()
-            #add them together
-            return key
+    # def decrypt(code, key)
+    #     code = [5, 7, 1, 4]
+    #     key = []
+    #     # get 3 elements from the code
+    #     def code.cycle.each_slice(3).take(4).push()
+    #         #add them together
+    #         return key
     
-            # output a new array = key
-        end
+    #         # output a new array = key
+    #     end
     
-    end
+    # end
