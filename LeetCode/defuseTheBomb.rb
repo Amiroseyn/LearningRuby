@@ -1,27 +1,39 @@
 #Navid way:
 
-def decrypt(code), key
+def decrypt(code, key, k, finalKeys)
     
-    # n == code.length
-    # 1 <= n <= 100
-    # 1 <= code[i] <= 100
-    # -(n - 1) <= k <= n - 1
 
-    i = 0
-    # k = 3
-
-    while key.length = code.length do 
-        x = #the combined values of the 3 elements after i
+    i = 0 #1
+    # x = 
+    # k = 13
+    #key = []
+    # a = [13, ]
+    while finalKeys.length != code.length do 
+        if key.length == 3
+          finalKeys.push(k)
+          key = []
+          # puts finalKeys
+        end
+        if code[i + 1] == nil
+          i = -1
+          # puts "asd"
+        end
+        x = code[i + 1]
         key.push(x)
+        k = key.sum
         i += 1
-        return key[i]
+        
     end
+    puts finalKeys
+    
 end
 
-code = [5, 7, 1, 4]
-key = []
+code1 = [5, 7, 2, 4]
+key1 = []
+kk = 0
+fks = []
 
-puts decrypt(code, key)
+puts decrypt(code1, key1, kk, fks)
 
 #Ruby way:
 
