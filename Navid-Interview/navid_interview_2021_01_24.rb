@@ -67,8 +67,6 @@ def myScores (scores)
     $num = scores.length
     max = 0 # 5
     
-
-    
     while $i < scores.length  do
         var = scores[$i] #var=5
         if max < var
