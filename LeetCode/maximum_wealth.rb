@@ -10,11 +10,16 @@ def maximum_wealth(accounts)
       end  
     return max 
 end
+
 max = 0
-
 accounts = [[1,2,1],[1,2,4,1],[1,1,1]]
-
 # puts accounts[1].sum
-
 # puts accounts[i + 1].sum
 puts maximum_wealth(accounts)
+
+# RUBY version
+
+def maximum_wealth(accounts)
+    accounts.map {|total| total.sum}
+    puts total.max
+end
