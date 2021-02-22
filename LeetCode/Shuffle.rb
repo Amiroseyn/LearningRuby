@@ -17,3 +17,24 @@ def shuffle(nums, n)
   n = 4
   
   puts shuffle(nums, n)
+
+
+#   this was my first attempt:
+
+#   def shuffle(nums, n)
+#     i = 0
+#     x = []
+#     y = []
+#     # n = 4
+#     while i < nums.length
+#       if i < n
+#         x.push(nums[i])
+#       end
+#       if i >= n
+#         y.push(nums[i])
+#       end
+#       i += 1
+#     end
+#     # return x
+#     return y
+#   end
