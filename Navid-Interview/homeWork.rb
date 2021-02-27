@@ -1,10 +1,13 @@
-class Color_duo
-    COLORS = %w(white, blue, brown, yellow) #["white", ...]
-    list = %w(blue, white, asdf)
-    def self.translate_color_to_number(list)
-      puts list
-    end
-    translate_color_to_number(a)
+class ColorDuo
+  COLORS = %w(black brown red orange yellow green blue violet grey white)
+  input = %w(blue, white, smt)
+  def self.translate_color_to_number(input)
+    output = COLORS.map {|i| i = COLORS.index(i)}
+    output
+    # COLORS.index(0)
   end
+  puts translate_color_to_number(input)
+end
 
-  #we need to have ""list" in line 4 and another name in line 7. Make it work!
+  #we need to have "list" in line 4 and another name in line 7. Make it work!
+
