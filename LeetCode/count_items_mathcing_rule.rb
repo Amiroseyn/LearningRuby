@@ -1,20 +1,23 @@
 def count_matches(devices, key, value)
     i = 0
-    key = 0
-    value = 0
+    outcome = 0
     while i < devices.length do
-      # if key == "type"
-      #   value = devices[0][0]
-      # end
-      if key == "color"
-        value = "hey"
+      j = 0
+      if devices[i][j] == value 
+        outcome += 1
       end
-      # if key == "name"
-      #   value = devices[0][2]
-      # end
-      value
+      j += 1
+      if devices[i][j] == value
+        outcome += 1
+      end
+      j += 1
+      if devices[i][j] == value
+        outcome += 1
+      end
+      j += 1
       i += 1
     end
+    puts outcome
   end
   
   
@@ -23,3 +26,11 @@ def count_matches(devices, key, value)
   ruleValue = "silver"
   
   puts count_matches(items, ruleKey, ruleValue)
+
+
+  #===== ruby version (at least trying)
+
+
+#   devices.each do |eachDevice|
+#     eachDevice.each do |outcome|
+#       if ....
