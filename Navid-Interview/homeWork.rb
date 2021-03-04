@@ -36,6 +36,28 @@ end
     puts duplicate
 end
 
+#==== tring the same problem with int arr
+
+class ResistorColorDuo
+  arr = [1, 2, 3, 5, 6, 3, 8, 9]
+  i = 0
+  n = 0  
+  x = 0
+  duplicate = 1
+  while i < arr.length do 
+    n = arr[i]
+    if x < n
+      x = n
+    end
+    if duplicate == x
+      x = duplicate
+    end
+    i += 1
+  end
+  puts duplicate
+end
+
+
   # sovlve all the questions you solved with while usig for loops.
   # one leet code per day solved by next week AND show what you learned about Ruby
 
