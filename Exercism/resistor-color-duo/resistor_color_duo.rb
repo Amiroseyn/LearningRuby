@@ -7,13 +7,8 @@ To get started with TDD, see the `README.md` file in your
 =end
 
 class ResistorColorDuo
-    COLORS = %w(black brown red orange yellow grEen blue violet Grey wHite).map(&:downcase)
+    COLORS = %w(black brown red orange yellow green blue violet grey white)
     def self.value(list)
-        #get the values in the list
-        l2 = list.first(2).map do |color|
-            #get the index of the item
-            COLORS.index(color).freeze
-        end
-        l2.join.to_i
+      list.first(2).map {|i| COLORS.index(i)}.join.to_i.freeze
     end
 end
