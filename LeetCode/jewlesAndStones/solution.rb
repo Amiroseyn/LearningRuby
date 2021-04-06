@@ -31,22 +31,22 @@ def num_jewels_in_stones(j, s)
 
   # trying to move forward:
   # the function gives us true if the character is in the array, but it ignores upper and lower cases
+  #Update: this works!
   def find_the_charachter(array, character)
-  i = 0
-  while i < array.length do
-    if array[i] == character
-      return true
-    else
-      return false
+    i = 0
+    number_of_characters = 0
+    while i < array.length
+      if array[i].downcase == character.downcase
+        number_of_characters += 1
+      end
+      i += 1 
     end
-    i += 1 
+    return number_of_characters
   end
-return array[i]
-end
-
-jewels = ["a", "A", "A"]
-x = "a"
-puts find_the_charachter(jewels, x)
+  
+  jewels = ["a", "b", "B", "B"]
+  x = "B"
+  puts find_the_charachter(jewels, x)
 
 #the ruby version obviosly works!
 jewels = ["a", "A", "A"]
