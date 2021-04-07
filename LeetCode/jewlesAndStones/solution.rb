@@ -52,3 +52,27 @@ def num_jewels_in_stones(j, s)
 jewels = ["a", "A", "A"]
 x = "a"
 jewels.include?(x)
+
+# a stupid working solution:
+
+def num_jewels_in_stones(jewels, stones)
+  i = 0
+  j = 0
+  array = []
+  number_of_characters = 0
+  while i < stones.length
+    if jewels[j] == stones[i]
+      number_of_characters += 1
+    end
+    i += 1 
+  end
+  j += 1
+  i = 0
+  while i < stones.length
+    if jewels[j] == stones[i]
+      number_of_characters += 1
+    end
+    i += 1
+  end
+  return number_of_characters
+end
