@@ -76,3 +76,26 @@ def num_jewels_in_stones(jewels, stones)
   end
   return number_of_characters
 end
+
+# Final solution #1:
+
+def num_jewels_in_stones(jewels, stones)
+  i = 0
+  j = 0
+  number_of_characters = 0
+  while j < jewels.length
+    while i < stones.length 
+      if jewels[j] == stones[i]
+        number_of_characters += 1
+      end
+      i += 1
+    end
+    i = 0
+    j += 1 
+  end
+  return number_of_characters
+end
+
+jewels = "aa"
+stones = "aAAbbbb"
+puts num_jewels_in_stones(jewels, stones)
