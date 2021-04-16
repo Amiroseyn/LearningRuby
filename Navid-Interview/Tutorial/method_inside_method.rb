@@ -96,3 +96,23 @@
   
   array = [2, 3]
   puts transform_array(array)
+
+  # the short answer, remember, its OK to use Ruby when youre writing in Ruby! :D 
+
+  def transform_array(array)
+    i = 0
+    array2 = []
+    while i < array.length
+      num1 = array[i]
+      array2.push(square(num1))
+      i += 1
+    end
+    return array2.sum
+  end
+  
+  def square(num1)
+    num1 * num1
+  end
+  
+  array = [1, 3]
+  puts transform_array(array)

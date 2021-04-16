@@ -99,3 +99,22 @@ end
 jewels = "aa"
 stones = "aAAbbbb"
 puts num_jewels_in_stones(jewels, stones)
+
+
+# Trying to come up with something, but this is BS for now:
+
+def find_jewel(array, item)
+  i = 0
+  x = 0
+  while i < array.length
+    if array.find {|n| n == item}
+      x += 1
+    end
+  i += 1
+  end
+  return x
+end
+
+array = [1, 2, 3, 3]
+item = 3
+puts find_jewel(array, item)
