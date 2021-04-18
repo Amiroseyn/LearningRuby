@@ -78,6 +78,8 @@ def num_jewels_in_stones(jewels, stones)
 end
 
 # Final solution #1:
+# run time: 112 ms
+# Memory: 210.1 MB
 
 def num_jewels_in_stones(jewels, stones)
   i = 0
@@ -114,6 +116,8 @@ def find_jewel(array, item)
 end
 
 # this is what I came up with using the BS above:
+# run time: 108 ms
+# Memory: 209.9 MB
 
 def num_jewels_in_stones(s, j)
   i = 0
@@ -132,6 +136,23 @@ def find_jewel(array, item)
     if n == item
       x += 1
     end
+  end
+  return x
+end
+
+# solution #i'veLostCount:
+# run time: 104 ms
+# Memory: 210.1 MB
+def num_jewels_in_stones(array, items)
+  x = 0
+  i = 0
+  while i < items.length
+    array.each_char do |item|
+      if item == items[i]
+        x += 1
+      end
+    end
+  i += 1
   end
   return x
 end
