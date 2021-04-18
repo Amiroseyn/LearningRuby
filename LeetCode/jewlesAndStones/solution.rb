@@ -104,17 +104,34 @@ puts num_jewels_in_stones(jewels, stones)
 # Trying to come up with something, but this is BS for now:
 
 def find_jewel(array, item)
-  i = 0
   x = 0
-  while i < array.length
-    if array.find {|n| n == item}
+  array.chars.each do |n|
+    if n == item
       x += 1
     end
-  i += 1
   end
   return x
 end
 
-array = [1, 2, 3, 3]
-item = 3
-puts find_jewel(array, item)
+# this is what I came up with using the BS above:
+
+def num_jewels_in_stones(s, j)
+  i = 0
+  output = 0
+  while i < j.length
+    single_jewel = j[i]
+    output += find_jewel(s, single_jewel)
+    i += 1
+  end
+  return output
+end
+
+def find_jewel(array, item)
+  x = 0
+  array.each_char do |n|
+    if n == item
+      x += 1
+    end
+  end
+  return x
+end
