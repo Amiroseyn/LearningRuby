@@ -8,14 +8,14 @@ To get started with TDD, see the `README.md` file in your
 
 
 class Series
-    size = 0
-    def initialize(string)
-      @string = string
-    end
-    def slice(size)
-      @string.first()
-    end
+  size = 0
+  def initialize(string)
+    @string = string
   end
+  def slice(size)
+    @string.first()
+  end
+end
   
   my_series = Series.new('32456')
   pp my_series.slice(4)
