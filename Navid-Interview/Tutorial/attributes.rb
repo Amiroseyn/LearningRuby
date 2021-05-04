@@ -32,8 +32,30 @@ class Car
   car = Car.new("1972", "Cuda")
   pp car.year #=> "1972"
 
+  # now you might ask 'what if I wanted to change the value of year? To that I first say very good question, then:
 
-  # but since this is Ruby, there is a shorter [built in] way of doing the same thing:
+  car = Car.new("1972", "Cuda")
+  car.year = "2010"
+  pp car.year #=> error: undefined method `year=' for class Car...
+
+  # To solve that we need to define year= in our class:
+
+  class Car
+    def initialize(year, make)
+      @year = year
+      @make = make
+    end
+  
+    def year=(year) # now the example above works fine
+        @year = year
+    end
+    def year 
+      @year 
+    end
+  end
+
+  # this is fine of course, but you should define everything you want to do with that variable (+, -, * ...)
+  # Do not worry tho! since this is Ruby, there is a shorter [built in] way of doing the same thing:
 
   class Car
     attr_accessor :year, :make # althou it still works the same way if you put this after the initilize, it is best practice to place it at the beginning of the class
@@ -45,8 +67,9 @@ class Car
   end
   
   car = Car.new("1972", "Cuda")
+  car.make = 'Dodge'
   pp car.year #=> "1972"
-  pp car.make #=> "Cuda"
+  pp car.make #=> "Dodge"
 
   
 =begin
