@@ -7,25 +7,28 @@
 # =end
 
 class Series
-  attr_reader :string
-
-  def initialize(string)
-    @string = string
-  end
-
-  def slice(size)
-    slice_count = string.length - size + 1
-    slice_count.times.map do |i|
-      string[i, size]
+    attr_reader :string
+    
+    def initialize(string)
+        @string = string
     end
-  end
+    
+    def slices(size)
+        if size > string.length 
+            raise ArgumentError, 'You want too much from me!'
+        end
+        slice_count = string.length - size + 1
+        slice_count.times.map do |i|
+            string[i, size]
+        end
+    end
 end
 
-  # my_series = Series.new('32945')
-  # pp my_series.slice(2)
+# my_series = Series.new('32945')
+# pp my_series.slice(2)
 
-  # sting = '12345'
-  # slice_size = 2
+# sting = '12345'
+# slice_size = 2
 
 # class Marriage
 #   def initialize(a, b)
