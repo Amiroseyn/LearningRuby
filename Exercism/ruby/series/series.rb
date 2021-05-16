@@ -14,9 +14,7 @@ class Series
     end
     
     def slices(size)
-        if size > string.length 
-            raise ArgumentError, 'You want too much from me!'
-        end
+        raise ArgumentError 'You want too much from me!' if size > string.length 
         slice_count = string.length - size + 1
         slice_count.times.map do |i|
             string[i, size]
