@@ -15,7 +15,7 @@ puts ruby_unique(original_array)
 # I dont think this needs more explenantion 
 
 # This one uses the key word "unless". 
-# It works very similar to "if", meanind it will do something UNLESS the condition (aka what you define after the key word) is true:
+# It works the oppisite of "if", meaning it will do something UNLESS the condition (aka what you define after the key word) is true:
 def just_once(original_array)
     unique = []
     i = 0
