@@ -25,5 +25,5 @@ def find_repeated_number(array)
   
   end
   
-  array = [1, 4, 7, 4, 1, 3,5, 5, 6, 2, 1]
+  array = [1, 4, 7, 4, 1, 3, 5, 5, 6, 2, 1]
   puts find_repeated_number(array)

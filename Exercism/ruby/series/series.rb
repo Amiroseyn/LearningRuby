@@ -15,46 +15,7 @@ class Series
     
     def slices(size)
         raise ArgumentError, 'You want too much from me!' if size > string.length 
-        slice_count = string.length - size + 1
-        slice_count.times.map do |i|
-            string[i, size]
-        end
+        string.chars.each_cons(size).map(&:join)
     end
 end
 
-# my_series = Series.new('32945')
-# pp my_series.slice(2)
-
-# sting = '12345'
-# slice_size = 2
-
-# class Marriage
-#   def initialize(a, b)
-#     @partner_1 = a
-#     @partner_2 = b
-#   end
-
-#   def to_s
-#     "#{@partner_1} loves #{@partner_2}"
-#   end
-# end
-
-# class Person
-#   attr_accessor :name
-#   def initialize(name)
-#     @name = name
-#   end
-
-#   def +(other)
-#     Marriage.new(self, other)
-#   end
-
-
-#   def to_s
-#     name
-#   end
-# end
-
-# amir = Person.new("Amir")
-# tatev = Person.new("Tatev")
-# puts amir + tatev
