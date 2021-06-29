@@ -7,14 +7,13 @@ To get started with TDD, see the `README.md` file in your
 =end
 
 
-class ArmstrongNumbersTest
+class ArmstrongNumbers
 
     def self.include?(input)
-        thePowerNumber = input.to_s.length
-        input.each_with_index do |singleNumber|
-            singleNumber ** thePowerNumber
-        end
+        power_number = input.to_s.length
+        input.digits.map { |digit|
+            digit ** power_number
+        }.reduce(:+)==input
     end
-
 
 end
