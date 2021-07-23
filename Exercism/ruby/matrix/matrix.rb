@@ -28,5 +28,9 @@ class Matrix
     end
 
 end
+i = 0
+string = Matrix.new("1 2\n10 20\n100 200 300")
+
+pp string.res.class
 
 

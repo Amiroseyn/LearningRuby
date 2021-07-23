@@ -57,6 +57,7 @@ class Person
   ali = Person.new("Ali", "Monemian")
   hayk = Person.new("Hayk", "Shoghunts")
   ashot = Person.new("Ashot", "Grigoryan")
+#   amir.name = 'Hovo'
   hayk.promote!
   team = Team.new("Cortage", [ali])
   
